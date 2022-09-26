@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500;600&display=swap');
+:root{
+    --border-radius: 10px;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow', sans-serif;
+    
+}
+body{
+    background-color: #edf2f8;
+    color: #fff;
+}
+.container{
+    max-width: 1110px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.p-2{
+    padding: 30px;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-template-areas: 
+    "box1 box1 box2 box3"
+    "box4 box5 box5 box3";
+    grid-gap: 20px;
+    
+}
+.card-content{
+    border-radius: var(--border-radius);
+}
+.card-content img{
+    border-radius: 50%;
+    width: 40px;
+}
+.card-content:first-child img,.card-content:nth-child(5) img{
+    border: 1px solid #9b7bce;
+}
+
+.card-content div.profile{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.card-content div.profile p{
+    display: inline-block;
+    margin-left: 1rem;
+    
+}
+.card-content div.profile span{
+    font-size: 14px;
+}
+.card-content:first-child div.profile span{
+    color: #9b7bce;
+    
+}
+.card-content:nth-child(2) div.profile span{
+    color: #8b98ab;
+}
+.card-content:nth-child(3) div.profile span{
+    color: #84898f;
+}
+.card-content:nth-child(4) div.profile span{
+    color: #84898f;
+}
+
+.card-content:nth-child(5) div.profile span{
+    color: #8b98ab;
+}
+.card-content div.text p{
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.card-content div.text p:last-of-type{
+    font-size: 14px;
+}
+.card-content:first-child div.text p:last-of-type{
+    color: #c09cf4;
+}
+.card-content:nth-child(2) div.text p:last-of-type{
+    color: #8b98ab;
+}
+.card-content:nth-child(3) div.text p:last-of-type{
+    color: #84898f;
+}
+.card-content:nth-child(4) div.text p:last-of-type{
+    color: #84898f;
+}
+.card-content:nth-child(5) div.text p:last-of-type{
+    color: #8b98ab;
+}
+
+.grid-container div.card-content:first-child{
+    grid-area: box1;
+    background-color: #733fc8;
+    
+}
+.grid-container div.card-content:nth-child(2){
+    grid-area: box2;
+    background-color: #49556b;
+}
+.grid-container div.card-content:nth-child(3){
+    grid-area: box3;
+    background-color: white;
+    color: #4e5760 !important;
+}
+.grid-container div.card-content:nth-child(4){
+    grid-area: box4;
+    background-color: white;
+    color: #4e5760 !important;
+}
+.grid-container div.card-content:nth-child(5){
+    grid-area: box5;
+    background-color: #18202d;
+    
+}
+@media only screen and (max-width:800px){
+    .container{
+        width: 100%;
+        min-height: 100vh;
+    }
+    .grid-container{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin: 1rem;
+    }
+}
